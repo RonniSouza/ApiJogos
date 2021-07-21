@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uWF1mmSVAsErNEnPQhADN268Y7Hwfaldb7xlGGkhYWTpdDHoGwOtR7GWkTZNLKUkh5uiQYCHue6s5Oma6vSNnA==",
+  "dgSpecHash": "9cyNoGCoEyQYX35m6N54S36gpFi/g5VuIUIvMpENul9MkSH47mak1ErLu1g3YsoZbilK/6fZehoI+kX3VNS2oQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
+  "projectFilePath": "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\ApiCatalogoJogos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ronni\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ronni\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.1\\microsoft.aspnetcore.authentication.jwtbearer.5.0.1.nupkg.sha512",

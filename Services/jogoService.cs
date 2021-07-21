@@ -39,7 +39,6 @@ namespace ApiCatalogoJogos.Services
 
             if (jogo == null)
                 return null;
-
             return new JogoViewModel
             {
                 Id = jogo.Id,
@@ -100,6 +99,8 @@ namespace ApiCatalogoJogos.Services
 
             await _jogoRepository.Atualizar(entidadeJogo);
         }
+
+
 
         public async Task Remover(Guid id)
         {

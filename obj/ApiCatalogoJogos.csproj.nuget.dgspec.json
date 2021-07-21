@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {}
+    "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\ApiCatalogoJogos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {
+    "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\ApiCatalogoJogos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
+        "projectUniqueName": "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\ApiCatalogoJogos.csproj",
         "projectName": "ApiCatalogoJogos",
-        "projectPath": "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
+        "projectPath": "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\ApiCatalogoJogos.csproj",
         "packagesPath": "C:\\Users\\Ronni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ronni\\Estudo\\C#\\ApiCatalogoJogos\\obj\\",
+        "outputPath": "C:\\Users\\Ronni\\estudo\\c#\\apicatalogojogos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

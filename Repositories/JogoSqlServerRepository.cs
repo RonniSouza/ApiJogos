@@ -20,7 +20,7 @@ namespace ApiCatalogoJogos.Repositories
         {
             var jogos = new List<Jogo>();
 
-            var comando = $"select * from Jogos order by id offset {((pagina - 1) * quantidade)} rows fetch next {quantidade} rows only";
+            var comando = $"select * from Jogos order by id offset { ((pagina - 1) * quantidade)} rows fetch next {quantidade} rows only";
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -33,12 +33,11 @@ namespace ApiCatalogoJogos.Repositories
                     Id = (Guid)sqlDataReader["Id"],
                     Nome = (string)sqlDataReader["Nome"],
                     Produtora = (string)sqlDataReader["Produtora"],
-                    Preco = (double)sqlDataReader["Preco"]
+                    Preco = (double)sqlDataReader["Preco"],
                 });
             }
 
             await sqlConnection.CloseAsync();
-
             return jogos;
         }
 
@@ -54,17 +53,16 @@ namespace ApiCatalogoJogos.Repositories
 
             while (sqlDataReader.Read())
             {
-                jogo = new Jogo
+                jogo = (new Jogo
                 {
                     Id = (Guid)sqlDataReader["Id"],
                     Nome = (string)sqlDataReader["Nome"],
                     Produtora = (string)sqlDataReader["Produtora"],
-                    Preco = (double)sqlDataReader["Preco"]
-                };
+                    Preco = (double)sqlDataReader["Preco"],
+                });
             }
 
             await sqlConnection.CloseAsync();
-
             return jogo;
         }
 
@@ -85,12 +83,11 @@ namespace ApiCatalogoJogos.Repositories
                     Id = (Guid)sqlDataReader["Id"],
                     Nome = (string)sqlDataReader["Nome"],
                     Produtora = (string)sqlDataReader["Produtora"],
-                    Preco = (double)sqlDataReader["Preco"]
+                    Preco = (double)sqlDataReader["Preco"],
                 });
             }
 
             await sqlConnection.CloseAsync();
-
             return jogos;
         }
 
@@ -100,7 +97,7 @@ namespace ApiCatalogoJogos.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
@@ -110,17 +107,17 @@ namespace ApiCatalogoJogos.Repositories
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
         public async Task Remover(Guid id)
         {
-            var comando = $"delete from Jogos where Id = '{id}'";
+            var comando = $"delete from Jogos where id = '{id}'";
 
             await sqlConnection.OpenAsync();
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
 
