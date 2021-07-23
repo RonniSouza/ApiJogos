@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiCatalogoJogos.Controllers.V1
 {
-[Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CicloDeVidaIDController : ControllerBase
     {

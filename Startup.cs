@@ -18,6 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using static ApiCatalogoJogos.Middleware.ExeceptionMiddleware;
+//using Swashbuckle.AspNetCore.Swagger;
 
 namespace ApiCatalogoJogos
 {
@@ -35,7 +36,7 @@ namespace ApiCatalogoJogos
         {
 
             services.AddScoped<IJogoService, JogoService>();
-            services.AddScoped<IJogoRepository, JogoSqlServerRepository>();
+            services.AddScoped<IJogoRepository, JogoRepository>();
 
             #region CicloDeVida
 
@@ -66,7 +67,7 @@ namespace ApiCatalogoJogos
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiCatalogoJogos v1"));
             }
 
-            app.UseMiddleware<ExceptionMiddleware>();
+            //app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
